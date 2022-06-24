@@ -1,0 +1,22 @@
+#!/sbin/sh
+
+running() {
+    clear
+    echo "Script is running!"
+    sleep 1.5
+    echo ""
+    echo "Cleaning cache..."
+    sleep 1
+    find /data/data/*/cache/* -delete &>/dev/null
+    find /sdcard/Android/data/*/cache/* -delete &>/dev/null
+    echo "Done! Cache has been cleared!"
+}
+
+if [ "$(whoami)" != "root" ]; then
+    echo "Run this command as root!"
+else
+    clear
+    echo "Running script..."
+    sleep 1.7
+    running
+fi
