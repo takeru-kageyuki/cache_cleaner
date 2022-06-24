@@ -1,6 +1,6 @@
 id=cache_cleaner
 name=Cache Cleaner
-version=v1.0-Stable
+version=v1.1-Stable
 versionCode=1
 author=Taka🌿
 description=This module will clear cache of all apps on every boot and can be done manually by typing `su -c cleaner` in Terminal.
