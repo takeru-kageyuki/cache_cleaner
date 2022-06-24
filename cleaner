@@ -1,5 +1,3 @@
-#!/sbin/sh
-
 running() {
     clear
     echo "Script is running!"
