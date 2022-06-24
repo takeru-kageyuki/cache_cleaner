@@ -1,4 +1,4 @@
 ## Changelog
 
-**v1.0-Stable**
-- Initial release
+**v1.1-Stable**
+- Fix cleaner script can't be executed
