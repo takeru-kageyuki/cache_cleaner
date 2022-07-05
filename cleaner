@@ -1,13 +1,15 @@
+#!/system/bin/sh
+
 running() {
     clear
     echo "Script is running!"
     sleep 1.5
     echo ""
-    echo "Cleaning cache..."
+    echo "Clearing apps cache..."
     sleep 1
     find /data/data/*/cache/* -delete &>/dev/null
     find /sdcard/Android/data/*/cache/* -delete &>/dev/null
-    echo "Done! Cache has been cleared!"
+    echo "Done! The apps cache has been cleared!"
 }
 
 if [ "$(whoami)" != "root" ]; then
