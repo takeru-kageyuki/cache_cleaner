@@ -1,22 +1,48 @@
 #!/system/bin/sh
 
-running() {
+# Declaring a function with the name "cleaner"
+cleaner() {
+    # Clear the Terminal screen
     clear
+    # Print text on Terminal screen
     echo "Script is running!"
-    sleep 1.5
+    # Pause script execution for 1.2 second
+    sleep 1.2
+    # Print blank line on Terminal screen
     echo ""
+    # Print text on Terminal screen
     echo "Clearing apps cache..."
+    # Pause script execution for 1 second
     sleep 1
+    # Find the apps cache in the "/data/data" directory and delete it
     find /data/data/*/cache/* -delete &>/dev/null
+    # Find the apps code_cache in the "/data/data" directory and delete it
+    find /data/data/*/code_cache/* -delete &>/dev/null
+    # Find the apps cache in the "/data/user_de/0" directory and delete it
+    find /data/user_de/0/*/cache/* -delete &>/dev/null
+    # Find the apps code_cache in the "/data/user_de/0" directory and delete it
+    find /data/user_de/0/*/code_cache/* -delete &>/dev/null
+    # Find the apps cache in the "/sdcard/Android/data" directory and delete it
     find /sdcard/Android/data/*/cache/* -delete &>/dev/null
+    # Print text on Terminal screen
     echo "Done! The apps cache has been cleared!"
 }
 
+# Check if the script is not running as root
 if [ "$(whoami)" != "root" ]; then
+    # Print text on Terminal screen
     echo "Run this command as root!"
 else
+    # Clear the Terminal screen
     clear
+    # Print text on Terminal screen
     echo "Running script..."
-    sleep 1.7
-    running
+    # Pause script execution for 1.5 second
+    sleep 1.5
+    # Calling/load the "cleaner" function
+    cleaner
 fi
+
+# Notes:
+# For more information about Shell Script, you can google it.
+# And respect my hard work, if you're using any parts of this script don't forget to give credit.
