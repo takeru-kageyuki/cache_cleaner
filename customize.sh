@@ -104,7 +104,6 @@ else
     sleep 3
     # Calling/load the "install_module" function
     install_module
-    abort
 fi
 
 # Notes:
