@@ -18,9 +18,9 @@ module_descriptions() {
     # Pause script execution for 2 second
     sleep 2
     # Print text on Terminal screen (Magisk)
-    ui_print "Telegram Channel:"
+    ui_print "Telegram Group:"
     # Print text on Terminal screen (Magisk)
-    ui_print " • https://t.me/TakaEmpire_Channel"
+    ui_print " • https://t.me/TakaEmpire_Discussion"
     # Print blank line on Terminal screen (Magisk)
     ui_print ""
     # Pause script execution for 2 second
@@ -43,8 +43,8 @@ install_module() {
     module_descriptions
     # Print text on Terminal screen (Magisk)
     ui_print "Installing..."
-    # Pause script execution for 1.5 second
-    sleep 1.5
+    # Pause script execution for 1.7 second
+    sleep 1.7
     # Print text on Terminal screen (Magisk)
     ui_print "- Extracting module files"
     # Extract the "cleaner" file
@@ -53,24 +53,24 @@ install_module() {
     unzip -o "$ZIPFILE" module.prop -d $MODPATH >&2
     # Extract the "service.sh" file
     unzip -o "$ZIPFILE" service.sh -d $MODPATH >&2
-    # Pause script execution for 1.7 second
-    sleep 1.7
+    # Pause script execution for 1.5 second
+    sleep 1.5
     # Print text on Terminal screen (Magisk)
     ui_print "- Settings module"
     # Create a parent directory with the name "/system/bin"
     mkdir -p $MODPATH/system/bin
     # Move the "cleaner" file to the "/system/bin" directory
     mv $MODPATH/cleaner $MODPATH/system/bin/cleaner
-    # Pause script execution for 1.7 second
-    sleep 1.7
+    # Pause script execution for 1.5 second
+    sleep 1.5
     # Print text on Terminal screen (Magisk)
     ui_print "- Settings permission"
     # Set default permissions to all directories and files
     set_perm_recursive $MODPATH 0 0 0755 0644
     # Set custom permissions to the "/system/bin" directory and "cleaner" file
     set_perm $MODPATH/system/bin/cleaner 0 0 0755 0755
-    # Pause script execution for 1.7 second
-    sleep 1.7
+    # Pause script execution for 1.5 second
+    sleep 1.5
 }
 
 # Cancel installation if API level lower than 21 (Android 5.0)
