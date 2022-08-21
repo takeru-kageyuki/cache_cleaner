@@ -23,16 +23,22 @@ boot_completed() {
 # Calling/load the "boot_completed" function
 boot_completed
 
-# Find the apps cache in the "/data/data" directory and delete it
-find /data/data/*/cache/* -delete &>/dev/null
-# Find the apps code_cache in the "/data/data" directory and delete it
-find /data/data/*/code_cache/* -delete &>/dev/null
-# Find the apps cache in the "/data/user_de/0" directory and delete it
-find /data/user_de/0/*/cache/* -delete &>/dev/null
-# Find the apps code_cache in the "/data/user_de/0" directory and delete it
-find /data/user_de/0/*/code_cache/* -delete &>/dev/null
-# Find the apps cache in the "/sdcard/Android/data" directory and delete it
-find /sdcard/Android/data/*/cache/* -delete &>/dev/null
+# Declaring a function with the name "cleaner"
+cleaner() {
+    # Find the apps cache in the "/data/data" directory and delete it
+    find /data/data/*/cache/* -delete &>/dev/null
+    # Find the apps code_cache in the "/data/data" directory and delete it
+    find /data/data/*/code_cache/* -delete &>/dev/null
+    # Find the apps cache in the "/data/user_de/{UID}" directory and delete it
+    find /data/user_de/*/*/cache/* -delete &>/dev/null
+    # Find the apps code_cache in the "/data/user_de/{UID}" directory and delete it
+    find /data/user_de/*/*/code_cache/* -delete &>/dev/null
+    # Find the apps cache in the "/sdcard/Android/data" directory and delete it
+    find /sdcard/Android/data/*/cache/* -delete &>/dev/null
+}
+
+# Calling/load the "cleaner" function
+cleaner
 
 # Notes:
 # For more information about Shell Script, you can google it.
