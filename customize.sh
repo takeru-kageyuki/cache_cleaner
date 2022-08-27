@@ -25,16 +25,6 @@ module_descriptions() {
     ui_print ""
     # Pause script execution for 2 second
     sleep 2
-    # Print text on Terminal screen (Magisk)
-    ui_print "Notes:"
-    # Print text on Terminal screen (Magisk)
-    ui_print " • This module is works on main user only (UID 0/Owner),"
-    # Print text on Terminal screen (Magisk)
-    ui_print " • That means this module doesn't work in multiple users."
-    # Print blank line on Terminal screen (Magisk)
-    ui_print ""
-    # Pause script execution for 2 second
-    sleep 2
 }
 
 # Declaring a function with the name "install_module"
