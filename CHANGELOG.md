@@ -1,3 +1,3 @@
 ## Changelog
 
-- Added support for multiple users
+- Added auto clean feature every 6 hours after boot
