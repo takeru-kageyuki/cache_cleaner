@@ -1,6 +1,6 @@
 {
-    "version": "v1.4-Stable",
-    "versionCode": "5",
-    "zipUrl": "https://github.com/takeru-kageyuki/cache_cleaner/releases/download/stable/CacheCleaner_v1.4-Stable.zip",
+    "version": "v1.5-Beta",
+    "versionCode": "6",
+    "zipUrl": "https://github.com/takeru-kageyuki/cache_cleaner/releases/download/beta/CacheCleaner_v1.5-Beta.zip",
     "changelog": "https://github.com/takeru-kageyuki/cache_cleaner/raw/main/CHANGELOG.md"
 }
