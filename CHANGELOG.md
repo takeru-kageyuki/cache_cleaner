@@ -1,3 +1,5 @@
 ## Changelog
 
-- Added auto clean feature every 6 hours after boot
+- Improved the automatic cleaning feature
+- Fixed some grammar spelling mistakes
+- Fixed some minor bugs
