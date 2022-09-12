@@ -4,45 +4,53 @@
 cleaner() {
     # Clear the Terminal screen
     clear
-    # Print text on Terminal screen
+    # Print text on the Terminal screen
     echo "Script is running!"
-    # Pause script execution for 1.2 second
-    sleep 1.2
-    # Print blank line on Terminal screen
-    echo ""
-    # Print text on Terminal screen
-    echo "Clearing apps cache..."
     # Pause script execution for 1 second
     sleep 1
-    # Find the apps cache in the "/data/data" directory and delete it
+    # Print a blank line on the Terminal screen
+    echo ""
+    # Print text on the Terminal screen
+    echo "Cleaning apps cache..."
+    # Pause script execution for 0.75 seconds
+    sleep 0.75
+    # Declaring a local variable with the name "logs1"
+    local logs1="[$(date +%H:%M:%S)] Cleaning apps cache... (Terminal)"
+    # Write the logs to the ".txt" file in the "/sdcard/Taka/cache_cleaner" directory
+    echo $logs1 >> /sdcard/Taka/cache_cleaner/logs.txt
+    # Search and clear the apps cache in the "/data/data" directory
     find /data/data/*/cache/* -delete &>/dev/null
-    # Find the apps code_cache in the "/data/data" directory and delete it
+    # Search and clear the apps code_cache in the "/data/data" directory
     find /data/data/*/code_cache/* -delete &>/dev/null
-    # Find the apps cache in the "/data/user_de/0" directory and delete it
+    # Search and clear the apps cache in the "/data/user_de/{UID}" directory
     find /data/user_de/*/*/cache/* -delete &>/dev/null
-    # Find the apps code_cache in the "/data/user_de/0" directory and delete it
+    # Search and clear the apps code_cache in the "/data/user_de/{UID}" directory
     find /data/user_de/*/*/code_cache/* -delete &>/dev/null
-    # Find the apps cache in the "/sdcard/Android/data" directory and delete it
+    # Search and clear the apps cache in the "/sdcard/Android/data" directory
     find /sdcard/Android/data/*/cache/* -delete &>/dev/null
-    # Print text on Terminal screen
-    echo "Done! The apps cache has been cleared!"
+    # Declaring a local variable with the name "logs2"
+    local logs2="[$(date +%H:%M:%S)] Done! The apps cache has been cleaned!\n"
+    # Write the logs to the ".txt" file in the "/sdcard/Taka/cache_cleaner" directory
+    echo -e $logs2 >> /sdcard/Taka/cache_cleaner/logs.txt
+    # Print text on the Terminal screen
+    echo "Done! The apps cache has been cleaned!"
 }
 
-# Check if the script is not running as root
+# Check if the script is running without root privileges
 if [ "$(whoami)" != "root" ]; then
-    # Print text on Terminal screen
-    echo "Run this command as root!"
+    # Print text on the Terminal screen
+    echo "Run this command with root privileges!"
 else
     # Clear the Terminal screen
     clear
-    # Print text on Terminal screen
+    # Print text on the Terminal screen
     echo "Running script..."
-    # Pause script execution for 1.5 second
-    sleep 1.5
-    # Calling/load the "cleaner" function
+    # Pause script execution for 1.25 seconds
+    sleep 1.25
+    # Calling the "cleaner" function
     cleaner
 fi
 
 # Notes:
 # For more information about Shell Script, you can google it.
-# And respect my hard work, if you're using any parts of this script don't forget to give credit.
+# And respect my hard work, if you're using any parts of this script don't forget to give credit from me.
