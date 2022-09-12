@@ -47,6 +47,8 @@ install_module() {
     sleep 1.7
     # Print text on the Terminal screen (Magisk)
     ui_print "- Extracting module files"
+    # Extract the "automatic.sh" file to the module directory
+    unzip -o "$ZIPFILE" "automatic.sh" -d $MODPATH >&2
     # Extract the "cleaner" file to the module directory
     unzip -o "$ZIPFILE" "cleaner" -d $MODPATH >&2
     # Extract the "module.prop" file to the module directory
