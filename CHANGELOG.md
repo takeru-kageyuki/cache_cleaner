@@ -1,5 +1,3 @@
 ## Changelog
 
-- Improved the automatic cleaning feature
-- Fixed some grammar spelling mistakes
-- Fixed some minor bugs
+- Fixed the automatic cleaning feature can't be executed 🗿
