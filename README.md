@@ -5,8 +5,8 @@
     <a href="https://github.com/takeru-kageyuki/cache_cleaner/blob/main/LICENSE"><img src="https://img.shields.io/github/license/takeru-kageyuki/cache_cleaner?color=brightgreen" alt="License"></a>
     <a href="https://github.com/takeru-kageyuki/cache_cleaner/releases"><img src="https://img.shields.io/github/downloads/takeru-kageyuki/cache_cleaner/total?color=brightgreen" alt="Downloads"></a>
 </div>
-<p>:herb: A module that allows your device to clear all apps cache on every boot and can be done manually by typing <code>su -c cleaner</code> in Terminal.</p>
-<p><strong>This module will clear cache in this directories:</strong></p>
+<p>:herb: A simple module that allows your device to clean all apps cache automatically if the total cache size is more than 1GB and can be done manually by typing <code>su -c cleaner</code> in the Terminal.</p>
+<p><strong>This module will clears the apps cache in the following directories:</strong></p>
 <ul>
     <li><code>/data/data/*/cache/*</code></li>
     <li><code>/data/data/*/code_cache/*</code></li>
@@ -18,6 +18,10 @@
 <ul>
     <li>Android 5.0+</li>
     <li>Magisk v23.0+</li>
+</ul>
+<h2>Notes:</h2>
+<ul>
+    <li>To disable the automatic cleaning feature, create an empty file with the name <code>disable</code> in the <code>/sdcard/Taka/cache_cleaner</code> directory and to enable it just delete the <code>disable</code> file and type <code>su -c magisk --service</code> in the Terminal</li>
 </ul>
 <hr>
 <p><strong><ins>Support Group!</ins></strong> :evergreen_tree:</p>
